@@ -1,0 +1,10 @@
+<launch>
+
+  <param name="use_sim_time" value="true" />
+
+  <node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+    <param name="resolution" value="0.02" />
+    <rosparam command="load" file="$(find slam_karto)/config/mapper_params.yaml" />
+  </node>
+
+</launch>
